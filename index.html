@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="+150 Brinquedos de Papel Prontos para Imprimir e Montar - Acabe com o vício em telas">
-  <title>+150 Brinquedos de Papel | Imprima e Monte</title>
+  <meta name="description" content="1500 Brinquedos de Papel Prontos para Imprimir e Montar - Acabe com o vício em telas">
+  <title>1500 Brinquedos de Papel | Imprima e Monte</title>
   
   <!-- Meta Pixel Code -->
   <script>
@@ -162,7 +162,20 @@
     @keyframes pulse { 0%,100%{transform:scale(1);box-shadow:0 4px 16px rgba(255,111,0,0.4)}50%{transform:scale(1.02);box-shadow:0 8px 32px rgba(255,111,0,0.6)} }
     @keyframes pulse-green { 0%,100%{transform:scale(1);box-shadow:0 6px 20px rgba(76,175,80,0.4)}50%{transform:scale(1.02);box-shadow:0 8px 32px rgba(76,175,80,0.6)} }
     
-    /* Responsive */
+
+    /* Carousel */
+    .carousel-wrapper { position: relative; overflow: hidden; width: 100%; }
+    .carousel-track { display: flex; transition: transform 0.5s ease; }
+    .carousel-slide { min-width: 100%; display: flex; justify-content: center; padding: 0 10px; box-sizing: border-box; }
+    .carousel-slide img { width: 100%; max-width: 400px; border-radius: 8px; }
+    .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,152,0,0.9); color: #fff; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 20px; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transition: background 0.2s; }
+    .carousel-btn:hover { background: #ff6f00; }
+    .carousel-btn.prev { left: 10px; }
+    .carousel-btn.next { right: 10px; }
+    .carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
+    .carousel-dot { width: 10px; height: 10px; border-radius: 50%; background: #ddd; border: none; cursor: pointer; transition: background 0.3s, transform 0.3s; padding: 0; }
+    .carousel-dot.active { background: #ff9800; transform: scale(1.3); }
+        /* Responsive */
     @media (max-width: 480px) {
       .hero-title{font-size:26px}.hero-subtitle{font-size:14px}.price-current{font-size:48px}.cta-btn{font-size:17px;padding:18px 20px}.features-title{font-size:20px}.features-badge{font-size:13px}.examples-title{font-size:19px}.access-title{font-size:22px}.final-title{font-size:24px}.final-new-price{font-size:44px}.final-btn{font-size:16px;padding:16px 18px}.testimonials-title{font-size:24px}.faq-title{font-size:20px}.faq-question{font-size:14px}
     }
@@ -177,9 +190,9 @@
   
   <!-- Hero -->
   <div class="hero">
-    <h1 class="hero-title">+150 Brinquedos de Papel Prontos para Imprimir e Montar</h1>
+    <h1 class="hero-title">1500 Brinquedos de Papel Prontos para Imprimir e Montar</h1>
     <p class="hero-subtitle">Acabe com o vício em telas e desperte a criatividade do seu filho. É Simples: Imprima e Monte!</p>
-    <img class="hero-img" src="https://doram.shop/wp-content/uploads/2026/02/hero-image.png" alt="+150 Brinquedos de Papel">
+    <img class="hero-img" src="https://doram.shop/wp-content/uploads/2026/02/hero-image.png" alt="1500 Brinquedos de Papel">
   </div>
   
 <!-- Benefits -->
@@ -209,46 +222,95 @@
   
   <!-- Examples -->
   <div class="examples">
-    <h3 class="examples-title">Veja Alguns Exemplos Que Você Irá Receber</h3>
-    <p class="examples-desc">São +150 Brinquedos de Papel de várias categorias como: Animais, Carros, Desenhos, Games, Heróis, Minecraft, Pokémon, Roblox e muitos outros personagens.</p>
-    <div class="examples-grid">
-      <div class="example-card"><img src="https://doram.shop/wp-content/uploads/2026/02/1.png" alt="Exemplo 1"></div>
-      <div class="example-card"><img src="https://doram.shop/wp-content/uploads/2026/02/3.png" alt="Exemplo 2"></div>
-      <div class="example-card"><img src="https://doram.shop/wp-content/uploads/2026/02/2.png" alt="Exemplo 3"></div>
-      <div class="example-card"><img src="https://doram.shop/wp-content/uploads/2026/02/5.png" alt="Exemplo 4"></div>
-      <div class="example-card"><img src="https://doram.shop/wp-content/uploads/2026/02/4.png" alt="Exemplo 5"></div>
-      <div class="example-card"><img src="https://doram.shop/wp-content/uploads/2026/02/6.png" alt="Exemplo 6"></div>
+    <div style="background:#2563eb;color:#fff;padding:20px;border-radius:12px 12px 0 0;margin-bottom:0">
+      <h3 style="font-family:'Oswald',sans-serif;font-size:24px;font-weight:700;margin:0;text-align:center">Veja alguns exemplos</h3>
+      <p style="font-size:14px;margin:8px 0 0;text-align:center">Imagens reais dos tipos de moldes que você vai receber</p>
     </div>
-    <div class="examples-footer">
-      <p class="examples-footer-text">🎨 É diversão e criatividade garantida!</p>
-      <span class="features-url">🌐 infocursosbrasil.com.br</span>
+    <div style="background:#fff;padding:20px;border-radius:0 0 12px 12px">
+      <div class="carousel-wrapper" id="carousel1">
+        <div class="carousel-track" id="track1">
+          <div class="carousel-slide"><img src="https://doram.shop/wp-content/uploads/2026/02/aGghCD0337977.webp" alt="Exemplo 1"></div>
+          <div class="carousel-slide"><img src="https://doram.shop/wp-content/uploads/2026/02/EuXAFv1746841.webp" alt="Exemplo 2"></div>
+          <div class="carousel-slide"><img src="https://doram.shop/wp-content/uploads/2026/02/FKqecD0337977.webp" alt="Exemplo 3"></div>
+          <div class="carousel-slide"><img src="https://doram.shop/wp-content/uploads/2026/02/ImQRAp1814145.webp" alt="Exemplo 4"></div>
+          <div class="carousel-slide"><img src="https://doram.shop/wp-content/uploads/2026/02/LmjaDB1746841.webp" alt="Exemplo 5"></div>
+          <div class="carousel-slide"><img src="https://doram.shop/wp-content/uploads/2026/02/PJNgcs0337977.webp" alt="Exemplo 6"></div>
+          <div class="carousel-slide"><img src="https://doram.shop/wp-content/uploads/2026/02/xXYjmu0337977.webp" alt="Exemplo 7"></div>
+          <div class="carousel-slide"><img src="https://doram.shop/wp-content/uploads/2026/02/YkFnip0337977.webp" alt="Exemplo 8"></div>
+        </div>
+        <button class="carousel-btn prev" onclick="moveCarousel('carousel1', -1)">‹</button>
+        <button class="carousel-btn next" onclick="moveCarousel('carousel1', 1)">›</button>
+      </div>
+      <div class="carousel-dots" id="dots1"></div>
     </div>
   </div>
   
-  <!-- Access -->
+    <!-- How to receive -->
+  <div class="examples">
+    <div style="background:#2563eb;color:#fff;padding:20px;border-radius:12px 12px 0 0;margin-bottom:0">
+      <h3 style="font-family:'Oswald',sans-serif;font-size:24px;font-weight:700;margin:0;text-align:center">Como eu recebo os moldes?</h3>
+      <p style="font-size:14px;margin:8px 0 0;text-align:center">Desmontados! - Basta imprimir, recortar e colar. Sua criança longe de telas nessas férias.</p>
+    </div>
+    <div style="background:#fff;padding:20px;border-radius:0 0 12px 12px">
+      <div class="carousel-wrapper" id="carousel2">
+        <div class="carousel-track" id="track2">
+          <div class="carousel-slide"><img src="https://doram.shop/wp-content/uploads/2026/02/AvzDEg0915269.webp" alt="Molde 1"></div>
+          <div class="carousel-slide"><img src="https://doram.shop/wp-content/uploads/2026/02/EdPqYY1507397.webp" alt="Molde 2"></div>
+          <div class="carousel-slide"><img src="https://doram.shop/wp-content/uploads/2026/02/FbFAwa1507397.webp" alt="Molde 3"></div>
+          <div class="carousel-slide"><img src="https://doram.shop/wp-content/uploads/2026/02/jIQtYo0915269.webp" alt="Molde 4"></div>
+          <div class="carousel-slide"><img src="https://doram.shop/wp-content/uploads/2026/02/JuSzGq0942991.webp" alt="Molde 5"></div>
+          <div class="carousel-slide"><img src="https://doram.shop/wp-content/uploads/2026/02/keMbfp0942991.webp" alt="Molde 6"></div>
+          <div class="carousel-slide"><img src="https://doram.shop/wp-content/uploads/2026/02/tnFsMn0915269.webp" alt="Molde 7"></div>
+          <div class="carousel-slide"><img src="https://doram.shop/wp-content/uploads/2026/02/xCuYrd0942991.webp" alt="Molde 8"></div>
+        </div>
+        <button class="carousel-btn prev" onclick="moveCarousel('carousel2', -1)">‹</button>
+        <button class="carousel-btn next" onclick="moveCarousel('carousel2', 1)">›</button>
+      </div>
+      <div class="carousel-dots" id="dots2"></div>
+      <div style="background:#fff8e1;border:2px solid #ff9800;border-radius:8px;padding:16px;margin-top:20px;text-align:center">
+        <p style="font-size:14px;font-weight:700;color:#d32f2f;margin:0">Todos os moldes possuem manual passo a passo, para montagem, basta seguir as etapas.</p>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Bonus -->
+  <div class="examples">
+    <div style="background:#2563eb;color:#fff;padding:20px;border-radius:12px 12px 0 0;margin-bottom:0">
+      <h3 style="font-family:'Oswald',sans-serif;font-size:24px;font-weight:700;margin:0;text-align:center">🎁 BÔNUS EXCLUSIVOS</h3>
+      <p style="font-size:14px;margin:8px 0 0;text-align:center">Leve GRÁTIS junto com seu pacote!</p>
+    </div>
+    <div style="background:#fff;padding:20px;border-radius:0 0 12px 12px">
+      <div class="examples-grid">
+        <div class="example-card"><img src="https://doram.shop/wp-content/uploads/2026/02/gkzMNi3826344.webp" alt="Bônus 1"></div>
+        <div class="example-card"><img src="https://doram.shop/wp-content/uploads/2026/02/NhSSnP3826344.webp" alt="Bônus 2"></div>
+        <div class="example-card"><img src="https://doram.shop/wp-content/uploads/2026/02/mRYbyH3826344.webp" alt="Bônus 3"></div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Access -->
   <div class="access">
-    <h3 class="access-title">Como Tenho Acesso ao Material?</h3>
-    <p class="access-subtitle">Após realizar o seu pedido e o pagamento você irá receber seu acesso diretamente no seu whatsapp e no seu email.</p>
-    <div class="access-steps">
-      <div class="access-step">
-        <div class="access-step-number">1</div>
-        <h4 class="access-step-title">Faça o Pedido do Material</h4>
-        <p class="access-step-desc">No final da página acesse a opção comprar para fazer o pedido</p>
+    <div style="background:#2563eb;color:#fff;padding:20px;border-radius:12px 12px 0 0;margin-bottom:0;text-align:center">
+      <h3 style="font-family:'Oswald',sans-serif;font-size:24px;font-weight:700;margin:0">Como vou receber todo o conteúdo?</h3>
+    </div>
+    <div style="background:#fff;padding:20px;border-radius:0 0 12px 12px">
+      <div style="text-align:center;margin-bottom:24px">
+        <p style="font-size:15px;font-weight:600;color:#111;margin:0 0 16px">Você recebe pelo seu E-mail e WhatsApp</p>
+        <div style="display:flex;justify-content:center;gap:20px;margin-bottom:20px">
+          <img src="https://doram.shop/wp-content/uploads/2026/02/MWmfnK7911681.webp" alt="WhatsApp" style="width:80px;height:80px">
+          <img src="https://doram.shop/wp-content/uploads/2026/02/CyFExY8148425.webp" alt="Email" style="width:80px;height:80px">
+        </div>
+        <p style="font-size:14px;color:#555;line-height:1.6;margin:0 auto;max-width:460px">Você recebe o acesso de todo o material, imediatamente após o pagamento.</p>
       </div>
-      <div class="access-step">
-        <div class="access-step-number">2</div>
-        <h4 class="access-step-title">Receba no seu Whatsapp e Email</h4>
-        <p class="access-step-desc">Enviaremos para o seu whatsapp e email as instruções de como acessar seu novo material</p>
-      </div>
-      <div class="access-step">
-        <div class="access-step-number">3</div>
-        <h4 class="access-step-title">Pagamento Único e Acesso Vitalício</h4>
-        <p class="access-step-desc">Sem taxas ou pegadinhas, pagamento único e acesso liberado para sempre</p>
+      <div style="text-align:center;padding-top:20px;border-top:1px solid #e0e0e0">
+        <img src="https://doram.shop/wp-content/uploads/2026/02/EClKMc8295312.webp" alt="Imprimir" style="max-width:120px;margin:0 auto 16px">
+        <h4 style="font-family:'Oswald',sans-serif;font-size:20px;font-weight:700;color:#111;margin:0 0 12px">Você imprime todo o Conteúdo e começa a montar!</h4>
+        <p style="font-size:14px;color:#555;line-height:1.6;margin:0 auto;max-width:460px">Recomendamos papel sulfite comum ou 180g para maior durabilidade.</p>
       </div>
     </div>
   </div>
   
-  <!-- Testimonials -->
+    <!-- Testimonials -->
 <div class="testimonials">
   <p class="testimonials-label">DEPOIMENTOS</p>
   <h3 class="testimonials-title">Aprovado, Por <span class="yellow">PAIS E MÃES!</span></h3>
@@ -350,7 +412,7 @@
   <!-- Final Offer -->
   <div class="final-offer" id="bloco-oferta">
     <div class="final-badge">🎉 93% DE DESCONTO SOMENTE HOJE</div>
-    <h2 class="final-title">+150 Brinquedos de Papel</h2>
+    <h2 class="final-title">1500 Brinquedos de Papel</h2>
     <p class="final-subtitle">Acabe com o vício em telas e desperte a criatividade do seu filho. É Simples: Imprima e Monte!</p>
     <div class="final-box">
       <p class="final-label">⭐ SUPER OFERTA ⭐</p>
@@ -375,6 +437,47 @@
 document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));t&&t.scrollIntoView({behavior:'smooth'})})})});
 </script>
 
+
+<script>
+const carousels = {
+  carousel1: { current: 0, total: 8 },
+  carousel2: { current: 0, total: 8 }
+};
+
+function initCarousel(id) {
+  const dotsContainer = document.getElementById('dots' + id.slice(-1));
+  for (let i = 0; i < carousels[id].total; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goToSlide(id, i);
+    dotsContainer.appendChild(dot);
+  }
+  setInterval(() => moveCarousel(id, 1), 4000);
+}
+
+function moveCarousel(id, direction) {
+  carousels[id].current = (carousels[id].current + direction + carousels[id].total) % carousels[id].total;
+  updateCarousel(id);
+}
+
+function goToSlide(id, index) {
+  carousels[id].current = index;
+  updateCarousel(id);
+}
+
+function updateCarousel(id) {
+  const track = document.getElementById('track' + id.slice(-1));
+  const dots = document.querySelectorAll('#dots' + id.slice(-1) + ' .carousel-dot');
+  track.style.transform = `translateX(-${carousels[id].current * 100}%)`;
+  dots.forEach((dot, i) => dot.classList.toggle('active', i === carousels[id].current));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initCarousel('carousel1');
+  initCarousel('carousel2');
+});
+</script>
+
 </body>
 </html>
 
@@ -383,7 +486,7 @@ document.addEventListener('DOMContentLoaded',function(){document.querySelectorAl
   <h3 class="faq-title">❓ Perguntas Frequentes</h3>
   <div class="faq-item">
     <button class="faq-question" onclick="toggleFaq(this)">Como recebo os brinquedos?<span class="faq-icon">+</span></button>
-    <div class="faq-answer">Tudo é digital! Após a compra, você recebe acesso instantâneo no e-mail para baixar todos os 150 modelos em PDF de alta qualidade. É só imprimir e montar!</div>
+    <div class="faq-answer">Tudo é digital! Após a compra, você recebe acesso instantâneo no e-mail para baixar todos os 1500 modelos em PDF de alta qualidade. É só imprimir e montar!</div>
   </div>
   <div class="faq-item">
     <button class="faq-question" onclick="toggleFaq(this)">Funciona para qualquer idade?<span class="faq-icon">+</span></button>
